@@ -1,8 +1,8 @@
 #encoding: UTF-8
+require 'capybara'
 require 'cucumber'
 require 'rspec'
 require 'selenium-webdriver'
-require 'capybara'
 require 'capybara/dsl'
 
 Capybara.register_driver :selenium do |app|
@@ -17,7 +17,4 @@ Capybara.default_selector = :css
 Capybara.default_max_wait_time = 10
 
 Capybara.app_host = 'http://www.google.com'
-
-$petstore_url = "http://petstore.swagger.io/v2/pet"
-
 World(Capybara::DSL)
